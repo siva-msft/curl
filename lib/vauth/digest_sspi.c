@@ -102,6 +102,7 @@ CURLcode Curl_auth_create_digest_md5_message(struct Curl_easy *data,
   unsigned char *input_token = NULL;
   unsigned char *output_token = NULL;
   CredHandle credentials;
+  credentials = {};
   CtxtHandle context;
   PSecPkgInfo SecurityPackage;
   SEC_WINNT_AUTH_IDENTITY identity;
