@@ -430,6 +430,7 @@ CURLcode Curl_sasl_continue(struct SASL *sasl, struct connectdata *conn,
                         data->set.str[STRING_SERVICE_NAME] :
                         sasl->params->service;
   char *serverdata;
+  serverdata = (void*)0;
 #endif
   size_t len = 0;
   const char *oauth_bearer = data->set.str[STRING_BEARER];
