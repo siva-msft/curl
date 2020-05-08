@@ -200,6 +200,7 @@ static CURLcode glob_range(URLGlob *glob, char **patternp,
     if(rc == 3) {
       if(end_c == ':') {
         char *endp;
+        endp = (void*)0;
         errno = 0;
         step = strtoul(&pattern[4], &endp, 10);
         if(errno || &pattern[4] == endp || *endp != ']')
