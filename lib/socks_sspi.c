@@ -78,6 +78,7 @@ CURLcode Curl_SOCKS5_gssapi_negotiate(int sockindex,
   SecPkgContext_Sizes sspi_sizes;
   CredHandle cred_handle;
   CtxtHandle sspi_context;
+  sspi_context = {};
   PCtxtHandle context_handle = NULL;
   SecPkgCredentials_Names names;
   TimeStamp expiry;
