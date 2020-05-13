@@ -453,6 +453,7 @@ static CURLcode post_per_transfer(struct GlobalConfig *global,
     else if(config->retry_connrefused &&
             (CURLE_COULDNT_CONNECT == result)) {
       long oserrno;
+      oserrno = 0;
       curl_easy_getinfo(curl, CURLINFO_OS_ERRNO, &oserrno);
       if(ECONNREFUSED == oserrno)
         retry = RETRY_CONNREFUSED;
